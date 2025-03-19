@@ -42,8 +42,5 @@ public class Demo{
             input.nextLine();
    		}
 		input.close();
-	} finally {
-		System.out.println("The number of policies with a smoker is: " + numSmoke);
-		System.out.println("The number of policies with a non-smoker is: " + (total-numSmoke));
 	}
 }
