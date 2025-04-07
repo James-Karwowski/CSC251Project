@@ -125,4 +125,9 @@ public class PolicyHolder{
 		bmi = (weight * 703) / (height * height);
 		return bmi;
 	}
+	@Override
+	public String toString(){
+		String retVal = "Policyholder's First Name: " + first + "\nPolicyholder's Last Name: " + last + "\nPolicyholder's Age: " age + "\nSmoking Status: " + smokeStatus + "\nHeight: "
+			+ height + "\nWeight: " + weight + "BMI: " + this.findHolderBMI();
+	}
 }
