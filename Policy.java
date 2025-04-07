@@ -67,4 +67,8 @@ public class Policy{
 		}
       return price;
 	}
+	@Override
+	public String toString(){
+		return "Policy Number: " + number + "\nProvider Name: " + provName + holder.toString() + "\nPolicy Price: " + this.policyPrice();
+	}
 }
