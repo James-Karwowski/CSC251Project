@@ -7,8 +7,8 @@ public class PolicyHolder{
 	private double weight;
 	private double bmi;
 	/**
-	This Policy constructor has no parameters sets each private variable in
-	the Policy class to an empty value.
+	This PolicyHolder constructor has no parameters sets each private variable in
+	the PolicyHolder class to an empty value.
 	**/
 	public PolicyHolder(){
 		first = "";
@@ -20,7 +20,7 @@ public class PolicyHolder{
 	}
 	
 	/**
-	This Policy constructor has has parameters that set each private variable in
+	This PolicyHolder constructor has has parameters that set each private variable in
 	the Policy class.
 	@param frt Holder First Name
 	@param lst Holder Last Name
@@ -29,7 +29,7 @@ public class PolicyHolder{
 	@param h Height
 	@param w Weight
 	**/
-	public Policy(String frt, String lst, int holderAge, String status, double h, double w){
+	public PolicyHolder(String frt, String lst, int holderAge, String status, double h, double w){
 		first = frt;
 		last = lst;
 		age = holderAge;
@@ -127,7 +127,8 @@ public class PolicyHolder{
 	}
 	@Override
 	public String toString(){
-		String retVal = "Policyholder's First Name: " + first + "\nPolicyholder's Last Name: " + last + "\nPolicyholder's Age: " age + "\nSmoking Status: " + smokeStatus + "\nHeight: "
-			+ height + "\nWeight: " + weight + "BMI: " + this.findHolderBMI();
+		String retVal = "\nPolicyholder's First Name: " + first + "\nPolicyholder's Last Name: " + last + "\nPolicyholder's Age: " + age + "\nSmoking Status: " + smokeStatus + "\nHeight: "
+			+ height + "\nWeight: " + weight + "\nBMI: " + this.findHolderBMI();
+         return retVal;
 	}
 }

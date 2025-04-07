@@ -28,6 +28,13 @@ public class Policy{
 		numPolicies++;
 	}
 	/**
+	This method returns the number of policies created.
+	@return numPolicies The number of policies created.
+	**/
+	public static int getNumPolicies(){
+		return numPolicies;
+	}
+	/**
 	This method changes the Policy number variable.
 	@param num The New Policy Number
 	**/
@@ -62,19 +69,19 @@ public class Policy{
 	**/
 	public int policyPrice(){
 		int price = 600;
-		if(age > 50){
+		if(holder.getAge() > 50){
 			price += 75;
 		}
-		if(smokeStatus.equals("smoker")){
+		if(holder.getSmokingStatus().equals("smoker")){
 			price += 100;
 		}
-		if(bmi > 35){
-			price += 20 * (bmi - 35);
+		if(holder.findHolderBMI() > 35){
+			price += 20 * (holder.findHolderBMI() - 35);
 		}
       return price;
 	}
 	@Override
 	public String toString(){
-		return "Policy Number: " + number + "\nProvider Name: " + provName + holder.toString() + "\nPolicy Price: " + this.policyPrice();
+		return "Policy Number: " + number + "\nProvider Name: " + provName + holder.toString() + "\nPolicy Price: " + this.policyPrice() + "\n";
 	}
 }
