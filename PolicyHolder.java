@@ -22,8 +22,6 @@ public class PolicyHolder{
 	/**
 	This Policy constructor has has parameters that set each private variable in
 	the Policy class.
-	@param num Policy Number
-	@param provider Policy Provider
 	@param frt Holder First Name
 	@param lst Holder Last Name
 	@param holderAge Age of Policyholder
