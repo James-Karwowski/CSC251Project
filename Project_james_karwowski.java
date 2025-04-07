@@ -34,7 +34,7 @@ public class Demo2{
    		}
 		input.close();
 		} finally {
-			System.out.println("There were " + Policy.getNumPolicies());
+			System.out.println("There were " + Policy.getNumPolicies() + "Policy objects created.");
 			System.out.println("The number of policies with a smoker is: " + numSmoke);
 			System.out.println("The number of policies with a non-smoker is: " + (total-numSmoke));
 		}
