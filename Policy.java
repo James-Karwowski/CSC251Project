@@ -1,6 +1,8 @@
 public class Policy{
 	private int number;
 	private String provName;
+	private PolicyHolder holder;
+	private static int numPolicies;
 	
 	/**
 	This Policy constructor has no parameters sets each private variable in
@@ -9,6 +11,8 @@ public class Policy{
 	public Policy(){
 		number = 0;
 		provName = "";
+		holder = new PolicyHolder();
+		numPolicies++;
 	}
 	
 	/**
@@ -17,9 +21,11 @@ public class Policy{
 	@param num Policy Number
 	@param provider Policy Provider
 	**/
-	public Policy(int num, String provider){
+	public Policy(int num, String provider, PolicyHolder policyHolder){
 		number = num;
 		provName = provider;
+		holder = policyHolder;
+		numPolicies++;
 	}
 	/**
 	This method changes the Policy number variable.
